@@ -1,0 +1,3 @@
+docker exec cp dump 24c7:/docker_folder
+docker exec -ti 24c7 psql -U bd_user
+docker exec 24c7 psql -U bd_user -d new_db -a -f /docker_folder
