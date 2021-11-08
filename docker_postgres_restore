@@ -1,4 +1,8 @@
 docker exec 24c7 mkdir docker_folder
 docker cp dump 24c7:/docker_folder
-docker exec -ti 24c7 psql -U bd_user
+
+#restore
 docker exec 24c7 psql -U bd_user -d new_db -a -f /docker_folder
+
+#lunch
+docker exec -ti 24c7 psql -U bd_user
